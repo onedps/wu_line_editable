@@ -47,7 +47,7 @@ end
 
 -- алгоритм ву, но... чуток оптимизирован. вы можете поэкспериментировать с fixed_point, я советую 65536 потому что больше стабильности.
 local draw_line = function(x0, y0, x1, y1, color: Color3)
-	local fixed_point = 16384
+	local fixed_point = 65536
 	local mask = fixed_point - 1
 
 	local r, g, b = color.R, color.G, color.B
