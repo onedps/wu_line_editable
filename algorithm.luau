@@ -45,7 +45,7 @@ local get_relative_mouse_pos = function(image_label: ImageLabel): Vector2
 	return Vector2.new(x, y)
 end
 
--- алгоритм ву, но... чуток оптимизирован. вы можете поэкспериментировать с fixed_point, но 16384 должно быть достаточно.
+-- алгоритм ву, но... чуток оптимизирован. вы можете поэкспериментировать с fixed_point, я советую 65536 потому что больше стабильности.
 local draw_line = function(x0, y0, x1, y1, color: Color3)
 	local fixed_point = 16384
 	local mask = fixed_point - 1
